@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
     public void OnDie()
     {
         //매니저에서 삭제처리
-        emi.Destroy(this);
+        emi.DestroyEnemy(this);
         
     }
     

@@ -37,7 +37,7 @@ public class EnemyManager : MonoBehaviour
         }
    }
 
-   public void Destroy(Enemy enemy)
+   public void DestroyEnemy(Enemy enemy)
    {
     //적 리스트에서 지정한 적 지우기
     enemyList.Remove(enemy);
