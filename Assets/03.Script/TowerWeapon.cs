@@ -15,6 +15,7 @@ public class TowerWeapon : MonoBehaviour
     [SerializeField] float attackRange = 2.0f;
     WeaponState weaponState = WeaponState.SearchTarget;
     Transform attackTarget = null;
+    
 
     public void  Init()
     {

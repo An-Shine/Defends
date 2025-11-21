@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5.0f;        //이동속도
     Transform target; //공격 목표
+    float damage = 0f;  //데미지
 
     public void SetTarget(Transform tr)
     {
@@ -36,8 +37,8 @@ public class Projectile : MonoBehaviour
         //충돌한 오브젝트가 목표가 아니면 리턴
         if(collision.transform != target) return;
 
-        //충돌한 적 삭제
-        collision.GetComponent<Enemy>().OnDie();
+        //충돌한 적에게 데미지 주기
+        collision.GetComponent<Enemy>().TakeDamage(damage);
         //발사체도 삭제
         Destroy(gameObject);
     }
